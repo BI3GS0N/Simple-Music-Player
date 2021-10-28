@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* === base === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    background-image: url(assets/love_race.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    transition: background-image 1s;
+}
+
+/* === container === */
+.container {
+    position: relative;
+    z-index: 100;
+    text-align: center;
+    backdrop-filter: blur(3px);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, .8), rgba(0, 0, 0, .8));
+    box-shadow: 0 5px 50px 10px rgba(0, 0, 0, .8);
+}
+
+/* === header === */
+.header {
+    margin: 3rem 0;
+    line-height: 2rem;
+    color: #000;
+}
+
+.title {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.attribution {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* === music cover === */
+.music-cover {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.music-cover__img {
+    height: 300px;
+    transition: 1s;
+    object-fit: cover;
+    opacity: .6;
+    animation: playing 3s infinite linear;
+    animation-play-state: paused;
+}
+
+.container.play .music-cover__img {
+    animation-play-state: running;
+}
+
+@keyframes playing {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* === music info ===*/
+.music-title {
+    margin: 1.5rem 0 .5rem;
+    font-size: 1.6rem;
+}
+
+.music-author {
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.progress-bar {
+    max-width: 100%;
+    height: 5px;
+    margin: 1rem;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+}
+
+.progress {
+    height: 100%;
+    width: 0;
+    background-color: #fff;
+}
+
+/* === Navigation === */
+.nav {
+    margin: 1.5rem 0;
+}
+
+.nav__btn {
+    display: inline-flex;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 5rem;
+    cursor: pointer;
+    transition: transform .3s linear;
+}
+
+.nav__btn:hover {
+    transform: scale(1.2);
+}

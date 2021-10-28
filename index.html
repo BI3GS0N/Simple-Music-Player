@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player by BI3GS0N</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <section class="container">
+
+        <header class="header">
+            <h1 class="title">Music Player</h1>
+            <p class="attribution">by Sylwester Biega</p>
+        </header>
+
+        <div class="music-cover">
+            <img src="assets/love_race_album_cover.jpg" alt="" class="music-cover__img" id="cover-img">
+        </div>
+
+        <div class="music-info">
+            <audio src="music/love_race.mp3" id="audio"></audio>
+            <h2 class="music-title" id="title">love race (feat. Kellin Quinn)</h2>
+            <p class="music-author" id="author">
+                Machine Gun Kelly
+            </p>
+            <div class="progress-bar" id="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+        </div>
+
+        <div class="nav">
+            <button class="nav__btn" id="prev">
+                <i class='bx bx-skip-previous'></i>
+            </button>
+            <button class="nav__btn" id="play">
+                <i class='bx bx-play'></i>
+            </button>
+            <button class="nav__btn" id="next">
+                <i class='bx bx-skip-next'></i>
+            </button>
+        </div>
+
+    </section>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

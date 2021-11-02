@@ -46,12 +46,12 @@ function playPause() {
     const playing = container.classList.contains('play')
     if (playing) {
         audio.pause()
-        document.querySelector('.container').classList.remove('play')
+        container.classList.remove('play')
         playBtn.querySelector('i.bx').classList.remove('bx-pause')
         playBtn.querySelector('i.bx').classList.add('bx-play')
     } else {
         audio.play()
-        document.querySelector('.container').classList.add('play')
+        container.classList.add('play')
         playBtn.querySelector('i.bx').classList.remove('bx-play')
         playBtn.querySelector('i.bx').classList.add('bx-pause')
     }
